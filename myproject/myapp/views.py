@@ -22,3 +22,27 @@ def  resturant(request):
     city = request.GET.get("city")
     rating = request.GET.get("rating")
     return HttpResponse(f"Food: {food}, City: {city}, Rating: {rating}")
+
+
+def addition(request):
+    num1 = int(request.GET.get("num1"))
+    num2 = int(request.GET.get("num2"))
+
+    result = num1 + num2
+
+    return HttpResponse(f"Result: {result}")
+
+def  multply(request):
+    num1 = int(request.GET.get("num1"))
+    num2 = int(request.GET.get("num2"))
+
+    result = num1 * num2
+
+    return HttpResponse(f"Result: {result}")
+
+def products(request):
+    product_name = request.GET.get("product_name")
+    product_price = request.GET.get("product_price")
+    product_quantity = request.GET.get("product_quantity")
+
+    return  HttpResponse(f"product_name:{product_name} , product_price:{product_price} , product_quantity:{product_quantity}")
