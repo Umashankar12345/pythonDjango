@@ -55,3 +55,15 @@ def products(request):
 
 def user_profile(request , username):
     return  HttpResponse(f"userProfile: {username}")
+
+
+def item_detail(request , item_id):
+    return HttpResponse(f"Item Id: {item_id}")
+
+def list_items(request):
+    items = ["Item 1" , "Item 2", "Item 3"]
+    return HttpResponse(f"Items: {',' .join(items)}")
+
+def restro_detail(request , category, subcategory ):
+    message = [f"showing resturant details for category: {category} and subcategory: {subcategory}"]
+    return HttpResponse(f"Resturant Details: {', '.join(message)}")
