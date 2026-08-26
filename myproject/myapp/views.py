@@ -46,3 +46,12 @@ def products(request):
     product_quantity = request.GET.get("product_quantity")
 
     return  HttpResponse(f"product_name:{product_name} , product_price:{product_price} , product_quantity:{product_quantity}")
+
+# //calculation of addition and multiplication is done using GET method. The values are passed in the URL as query parameters. For example, to add two numbers, you can use the following URL: http://localhost:8000/addition/?num1=5&num2=10. Similarly, to multiply two numbers, you can use the following URL: http://localhost:8000/multply/?num1=5&num2=10.
+
+
+
+# //regular expressions
+
+def user_profile(request , username):
+    return  HttpResponse(f"userProfile: {username}")

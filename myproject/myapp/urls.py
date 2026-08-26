@@ -1,4 +1,4 @@
-from django.urls import path
+from django.urls import path, re_path 
 from .import views
 
 urlpatterns = [
@@ -11,4 +11,5 @@ urlpatterns = [
     path("addition/" , views.addition),
     path("multply/" , views.multply),
     path("products/" , views.products),
+    re_path(r'^user/(?P<username>[a-zA-Z]+)/$', views.user_profile),
 ]
